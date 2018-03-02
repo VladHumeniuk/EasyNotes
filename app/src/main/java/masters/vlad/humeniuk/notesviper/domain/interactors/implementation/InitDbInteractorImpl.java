@@ -6,6 +6,7 @@ import io.reactivex.Observable;
 import masters.vlad.humeniuk.notesviper.database.dao.CategoryDao;
 import masters.vlad.humeniuk.notesviper.database.entity.DbCategory;
 import masters.vlad.humeniuk.notesviper.domain.interactors.InitDbInteractor;
+import masters.vlad.humeniuk.notesviper.domain.utils.CategoryUtil;
 
 public class InitDbInteractorImpl implements InitDbInteractor {
 
@@ -17,12 +18,10 @@ public class InitDbInteractorImpl implements InitDbInteractor {
 
     @Override
     public Observable<Long> init() {
-        DbCategory dbCategory = new DbCategory();
-        dbCategory.setName("No category");
-        dbCategory.setId(0);
-        dbCategory.setColor("#aaaaff");
         return Observable.fromCallable(() -> categoryDao.findAll())
                 .map(List::size)
-                .map(size -> size == 0 ? categoryDao.insert(dbCategory) : 0l);
+                .map(size -> size == 0
+                        ? categoryDao.insert(CategoryUtil.getDefaultCategory())
+                        : 0L);
     }
 }
