@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/title"
+        style="@style/DefaultText.24sp"
+        android:layout_width="match_parent"
+        android:hint="@string/title_hint"
+        android:lines="1"
+        tools:text="title"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp"/>
+
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/category_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"/>
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:hint="@string/note_hint"
+        android:gravity="top"
+        android:background="@color/lightGrey"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="4dp"
+        tools:text="some\ntext"/>
+
+</android.support.v7.widget.LinearLayoutCompat>

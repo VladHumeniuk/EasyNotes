@@ -1,0 +1,68 @@
+apply plugin: 'com.android.application'
+apply from: 'signing.gradle'
+apply from: 'dependencies.gradle'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias signingKeyAlias
+            keyPassword signingKeyPassword
+            storeFile file(signingStoreFile)
+            storePassword signingStorePassword
+        }
+    }
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "masters.vlad.humeniuk.notesviper"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation supportAppcompat + supportAppcompatVer
+    implementation supportDesign + supportDesignVer
+    compile recycleview + recycleviewVer
+    implementation constraintLayout + constraintLayoutVer
+
+    //Room
+    implementation roomRuntime + roomRuntimeVer
+    annotationProcessor roomCompiler + roomCompilerVer
+
+    //Dagger
+    compile dagger + daggerVer
+    annotationProcessor daggerCompiler + daggerCompilerVer
+    annotationProcessor daggerAnnotationProcessor + daggerAnnotationProcessorVer
+    compile daggerSupport + daggerSupportVer
+
+    //ButterKnife
+    compile butterknife + butterknifeVer
+    annotationProcessor butterknifeCompiler + butterknifeCompilerVer
+
+    //Rx
+    implementation rxandroid + rxandroidVer
+    implementation rxjava + rxjavaVer
+
+    compile colorPicker + colorPickerVer
+
+    //TEST
+    testImplementation junit + junitVer
+    androidTestImplementation testRunner + testRunnerVer
+    androidTestImplementation espressoCore + espressoCoreVer
+    testImplementation roomTesting + roomTestingVer
+}

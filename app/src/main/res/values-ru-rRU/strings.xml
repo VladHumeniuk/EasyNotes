@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EasyNotes</string>
+    <string name="action_notes_list">Заметки</string>
+    <string name="action_categories_list">Категории</string>
+    <string name="notes_list_title">Список заметок</string>
+    <string name="empty_list_text">Нечего показывать</string>
+    <string name="create_note_title">Новая заметка</string>
+    <string name="title_hint">Заголовок</string>
+    <string name="note_hint">Заметка</string>
+    <string name="empty_note_fields_error">Заголовок и описание заметки должны быть не пустыми</string>
+    <string name="date_created_title">Дата создания: %s</string>
+    <string name="date_edited_title">Дата последнего редактирования: %s</string>
+    <string name="category_section_title">Категория:</string>
+    <string name="save_label">Сохранить</string>
+    <string name="delete_label">Удалить</string>
+    <string name="cancel_label">Отмена</string>
+    <string name="info_label">Информация</string>
+    <string name="note_details_label">Детали заметки</string>
+    <string name="delete_note_confirmation_text">Вы уверены что хотите удалить эту заметку?</string>
+    <string name="create_category_title">Новая категория</string>
+    <string name="choose_color_label">Выберите цвет</string>
+    <string name="empty_category_fields_error">Заголовок категории должен быть не пустым и цвет должен быть выбран</string>
+    <string name="info">"EasyNotes!\nВыберите заметку, чтобы редактировать ее.\nВыберите категорию, чтобы увидеть все заметки из этой категории.\nДлительный клик на категории, чтобы редактировать ее."</string>
+</resources>

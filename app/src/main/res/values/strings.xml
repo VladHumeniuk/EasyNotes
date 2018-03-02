@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">EasyNotes</string>
+
+    <string name="action_notes_list">Notes</string>
+    <string name="action_categories_list">Categories</string>
+
+    <string name="notes_list_title">Notes List</string>
+    <string name="empty_list_text">Nothing to show</string>
+
+    <string name="create_note_title">New Note</string>
+    <string name="title_hint">Title</string>
+    <string name="note_hint">Note</string>
+    <string name="empty_note_fields_error">Note title and description should not be empty</string>
+
+    <string name="date_created_title">Created on: %s</string>
+    <string name="date_edited_title">Last edited on: %s</string>
+    <string name="category_section_title">Category:</string>
+
+    <string name="save_label">Save</string>
+    <string name="delete_label">Delete</string>
+    <string name="cancel_label">Cancel</string>
+    <string name="ok_label" translatable="false">OK</string>
+    <string name="info_label">Info</string>
+
+    <string name="note_details_label">Note details</string>
+    <string name="delete_note_confirmation_text">Are you sure you want to delete this note?</string>
+
+    <string name="create_category_title">New Category</string>
+    <string name="choose_color_label">Pick color</string>
+    <string name="color_format" translatable="false">#%s</string>
+    <string name="empty_category_fields_error">Category title should not be empty and color should be selected</string>
+
+    <string name="info">EasyNotes!  Select note to edit it. Select category to see all notes from this category. LongClick on category to edit it.</string>
+</resources>

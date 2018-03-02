@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/date_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightGrey"
+        android:padding="8dp">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/date_created"
+            style="@style/DefaultText.12sp"
+            android:text="@string/date_created_title"
+            app:layout_constraintStart_toStartOf="@id/date_container"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/date_edited"
+            style="@style/DefaultText.12sp"
+            android:text="@string/date_edited_title"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="@id/date_container"
+            app:layout_constraintTop_toBottomOf="@id/date_created"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/title"
+        style="@style/DefaultText.24sp"
+        android:layout_width="match_parent"
+        android:hint="@string/title_hint"
+        android:lines="1"
+        tools:text="title"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_marginTop="4dp"/>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+        <TextView
+            style="@style/DefaultText.12sp"
+            android:text="@string/category_section_title"
+            android:layout_marginRight="4dp"/>
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/category_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/black"
+        android:background="@color/lightGrey"
+        android:textSize="20sp"
+        android:hint="@string/note_hint"
+        android:gravity="top"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="4dp"
+        tools:text="some\ntext"/>
+
+</android.support.v7.widget.LinearLayoutCompat>
