@@ -34,7 +34,9 @@ public class EditCategoryActivity extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        router.showEditCategoryFragment((Category) getIntent().getExtras().get(EXTRA_CATEGORY));
+        if (getSupportFragmentManager().getBackStackEntryCount() == 0) {
+            router.showEditCategoryFragment((Category) getIntent().getExtras().get(EXTRA_CATEGORY));
+        }
     }
 
     @Override

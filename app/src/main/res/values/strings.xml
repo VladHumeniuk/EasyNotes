@@ -25,6 +25,8 @@
     <string name="note_details_label">Note details</string>
     <string name="delete_note_confirmation_text">Are you sure you want to delete this note?</string>
 
+    <string name="delete_category_confirmation_text">Are you sure you want to delete this category?</string>
+
     <string name="create_category_title">New Category</string>
     <string name="choose_color_label">Pick color</string>
     <string name="color_format" translatable="false">#%s</string>

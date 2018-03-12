@@ -6,13 +6,13 @@ import masters.vlad.humeniuk.notesviper.domain.entity.Note;
 import masters.vlad.humeniuk.notesviper.domain.interactors.AddNoteInteractor;
 import masters.vlad.humeniuk.notesviper.domain.mappers.NoteDbMapper;
 
-public class AddNoteInteractorImpl implements AddNoteInteractor {
+public class AddNoteDbInteractor implements AddNoteInteractor {
 
     private NoteDao noteDao;
 
     private NoteDbMapper noteDbMapper;
 
-    public AddNoteInteractorImpl(NoteDao noteDao, NoteDbMapper noteDbMapper) {
+    public AddNoteDbInteractor(NoteDao noteDao, NoteDbMapper noteDbMapper) {
         this.noteDao = noteDao;
         this.noteDbMapper = noteDbMapper;
     }

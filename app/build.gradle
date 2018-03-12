@@ -1,6 +1,8 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 apply from: 'signing.gradle'
 apply from: 'dependencies.gradle'
+apply from: '../jacoco.gradle'
 
 android {
     signingConfigs {
@@ -18,9 +20,13 @@ android {
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
+
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
+        debug {
+            testCoverageEnabled = true
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -30,6 +36,9 @@ android {
     compileOptions {
         targetCompatibility 1.8
         sourceCompatibility 1.8
+    }
+    sourceSets {
+        androidTest.java.srcDirs += 'src/androidTest/kotlin'
     }
 }
 
@@ -65,4 +74,10 @@ dependencies {
     androidTestImplementation testRunner + testRunnerVer
     androidTestImplementation espressoCore + espressoCoreVer
     testImplementation roomTesting + roomTestingVer
+    testCompile mockito + mockitoVer
+
+    testCompile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    testCompile "org.jetbrains.kotlin:kotlin-test:$kotlin_version"
+    testCompile "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
 }

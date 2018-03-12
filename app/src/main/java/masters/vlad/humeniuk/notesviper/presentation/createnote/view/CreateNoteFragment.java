@@ -67,6 +67,7 @@ public class CreateNoteFragment extends BaseFragment implements CreateNoteView {
     public void showEmptyFieldsError() {
         new AlertDialog.Builder(getBaseActivity())
                 .setTitle(R.string.empty_note_fields_error)
+                .setPositiveButton(R.string.ok_label, null)
                 .setCancelable(true)
                 .show();
     }

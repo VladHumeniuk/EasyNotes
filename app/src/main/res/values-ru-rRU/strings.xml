@@ -22,4 +22,5 @@
     <string name="choose_color_label">Выберите цвет</string>
     <string name="empty_category_fields_error">Заголовок категории должен быть не пустым и цвет должен быть выбран</string>
     <string name="info">"EasyNotes!\nВыберите заметку, чтобы редактировать ее.\nВыберите категорию, чтобы увидеть все заметки из этой категории.\nДлительный клик на категории, чтобы редактировать ее."</string>
+    <string name="delete_category_confirmation_text">Вы уверены что хотите удалить эту категорию?</string>
 </resources>

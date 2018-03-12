@@ -29,7 +29,9 @@ public class CreateCategoryActivity extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        router.showCreateCategoryFragment();
+        if (getSupportFragmentManager().getBackStackEntryCount() == 0) {
+            router.showCreateCategoryFragment();
+        }
     }
 
     @Override

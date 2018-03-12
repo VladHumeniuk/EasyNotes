@@ -38,7 +38,9 @@ public class CreateNoteActivity extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        router.showCreateNoteFragment((Category) getIntent().getExtras().get(EXTRA_CATEGORY));
+        if (getSupportFragmentManager().getBackStackEntryCount() == 0) {
+            router.showCreateNoteFragment((Category) getIntent().getExtras().get(EXTRA_CATEGORY));
+        }
     }
 
     @Override

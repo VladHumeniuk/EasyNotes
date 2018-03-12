@@ -117,7 +117,7 @@ public class EditCategoryFragment extends BaseFragment implements EditCategoryVi
                 return true;
             }
             case R.id.action_delete: {
-                presenter.onDelete();
+                showDeleteConfirmationDialog();
                 return true;
             }
             default: {
@@ -129,5 +129,15 @@ public class EditCategoryFragment extends BaseFragment implements EditCategoryVi
     @OnClick(R.id.color_container)
     protected void onSelectColorClick() {
         colorPicker.show();
+    }
+
+    private void showDeleteConfirmationDialog() {
+        new AlertDialog.Builder(getContext())
+                .setCancelable(true)
+                .setTitle(R.string.delete_category_confirmation_text)
+                .setPositiveButton(R.string.delete_label, (d, i) -> presenter.onDelete())
+                .setNegativeButton(R.string.cancel_label, (d, i) -> {
+                })
+                .show();
     }
 }

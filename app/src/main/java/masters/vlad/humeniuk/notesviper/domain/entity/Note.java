@@ -88,6 +88,17 @@ public class Note implements Parcelable {
     }
 
     @Override
+    public boolean equals(Object obj) {
+        return obj instanceof Note
+                && id == ((Note) obj).getId()
+                && title.equals(((Note) obj).getTitle())
+                && description.equals(((Note) obj).getDescription())
+                && dateCreated.equals(((Note) obj).getDateCreated())
+                && dateLastEdit.equals(((Note) obj).getDateLastEdit())
+                && category.equals(((Note) obj).getCategory());
+    }
+
+    @Override
     public int describeContents() {
         return 0;
     }

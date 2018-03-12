@@ -19,6 +19,7 @@ ext {
     testRunner = 'com.android.support.test:runner:'
     espressoCore = 'com.android.support.test.espresso:espresso-core:'
     roomTesting = 'android.arch.persistence.room:testing:'
+    mockito = "org.mockito:mockito-core:"
 
     supportAppcompatVer = '26.1.0'
     supportDesignVer = '26.1.0'
@@ -40,4 +41,5 @@ ext {
     testRunnerVer = '1.0.1'
     espressoCoreVer = '3.0.1'
     roomTestingVer = '1.0.0'
+    mockitoVer = '2.15.0'
 }

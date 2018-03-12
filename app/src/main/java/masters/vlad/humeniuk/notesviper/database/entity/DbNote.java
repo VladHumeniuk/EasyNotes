@@ -68,6 +68,17 @@ public class DbNote {
         this.categoryId = categoryId;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        return obj instanceof DbNote
+                && id == ((DbNote) obj).getId()
+                && title.equals(((DbNote) obj).getTitle())
+                && description.equals(((DbNote) obj).getDescription())
+                && dateCreated == ((DbNote) obj).getDateCreated()
+                && dateLastEdit == ((DbNote) obj).getDateLastEdit()
+                && categoryId == ((DbNote) obj).getCategoryId();
+    }
+
     public interface Columns {
 
         String ID = "id";

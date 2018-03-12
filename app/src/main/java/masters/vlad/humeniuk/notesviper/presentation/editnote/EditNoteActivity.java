@@ -34,7 +34,9 @@ public class EditNoteActivity extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        router.showEditNoteFragment((Note) getIntent().getExtras().get(EXTRA_NOTE));
+        if (getSupportFragmentManager().getBackStackEntryCount() == 0) {
+            router.showEditNoteFragment((Note) getIntent().getExtras().get(EXTRA_NOTE));
+        }
     }
 
     @Override

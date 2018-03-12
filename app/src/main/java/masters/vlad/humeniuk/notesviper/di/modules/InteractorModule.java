@@ -16,7 +16,7 @@ import masters.vlad.humeniuk.notesviper.domain.interactors.InitDbInteractor;
 import masters.vlad.humeniuk.notesviper.domain.interactors.NotesListByCategoryInteractor;
 import masters.vlad.humeniuk.notesviper.domain.interactors.NotesListInteractor;
 import masters.vlad.humeniuk.notesviper.domain.interactors.implementation.AddCategoryDbInteractor;
-import masters.vlad.humeniuk.notesviper.domain.interactors.implementation.AddNoteInteractorImpl;
+import masters.vlad.humeniuk.notesviper.domain.interactors.implementation.AddNoteDbInteractor;
 import masters.vlad.humeniuk.notesviper.domain.interactors.implementation.CategoriesListDbInteractor;
 import masters.vlad.humeniuk.notesviper.domain.interactors.implementation.DeleteCategoryDbInteractor;
 import masters.vlad.humeniuk.notesviper.domain.interactors.implementation.DeleteNoteDbInteractor;
@@ -64,7 +64,7 @@ public class InteractorModule {
     @UserScope
     AddNoteInteractor provideAddNoteInteractor(NoteDao noteDao,
                                                NoteDbMapper noteDbMapper) {
-        return new AddNoteInteractorImpl(noteDao, noteDbMapper);
+        return new AddNoteDbInteractor(noteDao, noteDbMapper);
     }
 
     @Provides

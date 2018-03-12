@@ -35,6 +35,14 @@ public class DbCategory {
         this.color = color;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        return obj instanceof DbCategory
+                && id == ((DbCategory) obj).getId()
+                && name.equals(((DbCategory) obj).getName())
+                && color.equals(((DbCategory) obj).getColor());
+    }
+
     public interface Columns {
 
         String ID = "id";
